@@ -62,15 +62,6 @@ class CompletableFutureTest {
      * Methods with "async" in their name, can be given an executor (aka thread pool) on which to run.
      */
     @Test
-/**
- * Ways of specifying units of computation:
- * <ul>
- * <li>As a Supplier via the static "supplyAsync" method (output only)
- * <li>As a Runnable via "run" methods (neither input nor output) - e.g. thenRun(Runnable) or the static runAsync(Runnable)
- * <li>As a Function via "apply" methods (input & output) - e.g. thenApply(Function)
- * <li>As a Consumer via "accept" methods (input only) - e.g. thenAccept(Consumer)
- * </ul>
- */
     void asyncExecutionOfRunnableUsingProvidedThreadPool() throws Exception {
         Runnable sleepThenPrintHelloWorldRunnable = () -> {
             assertCurrentThreadIsFromMyThreadPool();
@@ -82,7 +73,6 @@ class CompletableFutureTest {
         noResultFuture1.get();
         noResultFuture2.get();
     }
-
 
     /**
      * Static methods on CompletableFuture to create instances.
@@ -218,7 +208,7 @@ class CompletableFutureTest {
     void usingQuickestFutureAsResult() throws Exception {
 
         CompletableFuture<Integer> firstFetcher = CompletableFuture.supplyAsync(() -> {
-            sleepBetween(10, 50);
+            sleepBetween(15, 45);
             return 20;
         });
 
