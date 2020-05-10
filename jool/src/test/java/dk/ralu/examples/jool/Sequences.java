@@ -16,6 +16,9 @@ import org.jooq.lambda.tuple.Tuple3;
 import org.jooq.lambda.tuple.Tuple4;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Also see <a href="https://github.com/jOOQ/jOOL#orgjooqlambdaseq">https://github.com/jOOQ/jOOL</a>.
+ */
 class Sequences {
 
     @Test

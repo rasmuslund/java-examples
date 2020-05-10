@@ -11,6 +11,9 @@ import org.jooq.lambda.UncheckedException;
 import org.jooq.lambda.fi.lang.CheckedRunnable;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Also see <a href="https://github.com/jOOQ/jOOL#orgjooqlambdaunchecked">https://github.com/jOOQ/jOOL</a>.
+ */
 class Exceptions {
 
     @Test
